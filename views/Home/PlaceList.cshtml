@@ -1,0 +1,15 @@
+<h1>List of places visited</h1>
+<ul>
+  @foreach(var Place in Model)
+  {
+      <li>@Place.GetCity()</li>
+      <ul>
+        <li>@Place.GetCountry()</li>
+        <li>@Place.GetYear()</li>
+      </ul>
+  }
+</ul>
+<p><a href="/">Add another place</a></p>
+<form action="/place/list/clear" method="post">
+  <button type="submit" name="button">Clear All Places</button>
+</form>
