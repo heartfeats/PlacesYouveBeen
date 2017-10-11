@@ -6,9 +6,11 @@
       <ul>
         <li>@Place.GetCountry()</li>
         <li>@Place.GetYear()</li>
+        <li><img src="@Place.GetPhoto()" style="max-width:400px;"></li>
       </ul>
   }
 </ul>
+<br>
 <p><a href="/">Add another place</a></p>
 <form action="/place/list/clear" method="post">
   <button type="submit" name="button">Clear All Places</button>

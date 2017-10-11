@@ -7,14 +7,16 @@ namespace PlacesYouveBeen.Models
     private string _city;
     private string _country;
     private int _year;
+    private string _photo;
     private static List<Place> _instances = new List<Place> {};
 
     //this is the constructor
-    public Place (string city, string country, int year)
+    public Place (string city, string country, int year, string photo)
     {
       _city = city;
       _country = country;
       _year = year;
+      _photo = photo;
     }
 
 
@@ -31,6 +33,11 @@ namespace PlacesYouveBeen.Models
     public int GetYear()
     {
       return _year;
+    }
+
+    public string GetPhoto()
+    {
+      return _photo;
     }
 
     public static List<Place> GetAll()

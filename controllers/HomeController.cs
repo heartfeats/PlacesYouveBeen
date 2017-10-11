@@ -23,7 +23,7 @@ namespace PlacesYouveBeen.Controllers
         [HttpPost("/place/create")]
         public ActionResult CreatePlace()
         {
-          Place newPlace = new Place (Request.Form["new-city"], Request.Form["new-country"], int.Parse(Request.Form["new-year"]));
+          Place newPlace = new Place (Request.Form["new-city"], Request.Form["new-country"], int.Parse(Request.Form["new-year"]), Request.Form["new-photo"]);
           newPlace.Save();
           return View(newPlace);
         }
